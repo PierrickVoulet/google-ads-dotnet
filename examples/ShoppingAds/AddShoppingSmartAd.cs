@@ -92,6 +92,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// constructed elsewhere.
         ///
         /// See AddShoppingListingGroupTree for a more comprehensive example.</param>
+        // [START Y5NmIxZWQ4]
         public void Run(GoogleAdsClient client, long customerId, long merchantCenterAccountId,
             bool createDefaultListingGroup)
         {
@@ -129,6 +130,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 throw;
             }
         }
+        // [END Y5NmIxZWQ4]
 
         /// <summary>
         /// Creates a new campaign budget in the specified client account.
@@ -192,6 +194,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 MerchantId = merchantCenterAccountId,
             };
 
+            // [START I2YTc5YzJi]
             // Create the standard shopping campaign.
             Campaign campaign = new Campaign()
             {
@@ -227,6 +230,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 // Sets the budget.
                 CampaignBudget = budgetResourceName
             };
+            // [END I2YTc5YzJi]
 
             // Creates a campaign operation.
             CampaignOperation operation = new CampaignOperation()

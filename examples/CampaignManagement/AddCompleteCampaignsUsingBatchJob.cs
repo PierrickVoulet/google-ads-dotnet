@@ -128,6 +128,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="batchJobService">The batch job service.</param>
         /// <param name="customerId">The Google Ads customer ID for which the call is made.</param>
         /// <returns>The resource name of the created batch job.</returns>
+        // [START U5ZTNkZGY5]
         private static string CreateBatchJob(BatchJobServiceClient batchJobService,
             long customerId)
         {
@@ -145,6 +146,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
 
             return batchJobResourceName;
         }
+        // [END U5ZTNkZGY5]
 
         /// <summary>
         /// Adds all batch job operations to the batch job. As this is the first time for this
@@ -156,6 +158,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="batchJobResourceName">The resource name of batch job to which the batch
         /// job operations will be added.
         /// </param>
+        // [START cyMGM4MDM2]
         private static void AddAllBatchJobOperations(BatchJobServiceClient batchJobService,
             long customerId, string batchJobResourceName)
         {
@@ -173,6 +176,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
             Console.WriteLine($"Next sequence token for adding next operations is " +
                 $"'{response.NextSequenceToken}'.");
         }
+        // [END cyMGM4MDM2]
 
         /// <summary>
         /// Requests the API to run the batch job for executing all uploaded batch job
@@ -181,6 +185,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="batchJobService">The batch job service client.</param>
         /// <param name="batchJobResourceName">The resource name of batch job to be run.</param>
         /// <returns>The operation response from running batch job.</returns>
+        // [START ViMDE2YzU5]
         private Operation<Empty, BatchJobMetadata> RunBatchJob(
             BatchJobServiceClient batchJobService, string batchJobResourceName)
         {
@@ -191,12 +196,14 @@ namespace Google.Ads.GoogleAds.Examples.V5
 
             return operationResponse;
         }
+        // [END ViMDE2YzU5]
 
         /// <summary>
         /// Polls the server until the batch job execution finishes by setting the total
         /// time to wait before time-out.
         /// </summary>
         /// <param name="operationResponse">The operation response used to poll the server.</param>
+        // [START ZlZTNkYTA4]
         private static void PollBatchJob(Operation<Empty, BatchJobMetadata> operationResponse)
         {
             PollSettings pollSettings = new PollSettings(
@@ -204,12 +211,14 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 TimeSpan.FromSeconds(1));
             operationResponse.PollUntilCompleted(pollSettings);
         }
+        // [END ZlZTNkYTA4]
 
         /// <summary>
         /// Fetches and prints all the results from running the batch job.
         /// </summary>
         /// <param name="batchJobService">The batch job service.</param>
         /// <param name="batchJobResourceName">The resource name of batch job to get its results.</param>
+        // [START I0M2Y0YzZk]
         private static void FetchAndPrintResults(BatchJobServiceClient batchJobService,
             string batchJobResourceName)
         {
@@ -244,6 +253,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 }
             }
         }
+        // [END I0M2Y0YzZk]
 
         /// <summary>
         /// Builds all operations for creating a complete campaign and return an array of

@@ -61,6 +61,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="client">The Google Ads client.</param>
         /// <param name="customerId">The Google Ads customer ID for which the call is made.</param>
         /// <param name="billingSetupId">ID of the billing setup to remove.</param>
+        // [START E4ZmQyZTE4]
         public void Run(GoogleAdsClient client, long customerId, long billingSetupId)
         {
             // Get the BillingSetupServiceClient.
@@ -94,5 +95,6 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 throw;
             }
         }
+        // [END E4ZmQyZTE4]
     }
 }

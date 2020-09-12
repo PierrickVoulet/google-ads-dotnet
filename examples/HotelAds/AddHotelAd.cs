@@ -90,6 +90,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="customerId">The customer ID for which the call is made.</param>
         /// <param name="hotelCenterAccountId">The Hotel Center account ID.</param>
         /// <param name="cpcBidCeilingMicroAmount">The CPC bid ceiling micro amount.</param>
+        // [START IxNDIzNjJj]
         public void Run(GoogleAdsClient client, long customerId, long hotelCenterAccountId,
             long cpcBidCeilingMicroAmount)
         {
@@ -118,6 +119,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 throw;
             }
         }
+        // [END IxNDIzNjJj]
 
         /// <summary>
         /// Creates a new campaign budget in the specified client account.
@@ -170,6 +172,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
             // Get the CampaignService.
             CampaignServiceClient service = client.GetService(Services.V5.CampaignService);
 
+            // [START Q0OTQxZjNj]
             // Create a campaign.
             Campaign campaign = new Campaign()
             {
@@ -205,6 +208,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                     TargetGoogleSearch = true
                 }
             };
+            // [END Q0OTQxZjNj]
 
             // Create a campaign operation.
             CampaignOperation campaignOperation = new CampaignOperation()

@@ -48,6 +48,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// Runs the code example.
         /// </summary>
         /// <param name="client">The Google Ads client.</param>
+        // [START hmOTI2NGE5]
         public void Run(GoogleAdsClient client)
         {
             // Get the GeoTargetConstantServiceClient.
@@ -100,5 +101,6 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 throw;
             }
         }
+        // [END hmOTI2NGE5]
     }
 }

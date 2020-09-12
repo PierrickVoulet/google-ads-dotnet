@@ -139,6 +139,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="gmbAccessToken">The OAuth2 access token for The Google My Business
         /// account.</param>
         /// <returns>ID of the newly created Google My Business feed.</returns>
+        // [START cwYTNjNmRh]
         private static string CreateGMBFeed(GoogleAdsClient client, long customerId,
             string gmbEmailAddress, string businessAccountId, string gmbAccessToken)
         {
@@ -203,6 +204,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
             Console.WriteLine($"GMB feed created with resource name: {gmbFeedResourceName}.");
             return gmbFeedResourceName;
         }
+        // [END cwYTNjNmRh]
 
         /// <summary>
         /// Deletes the old location extension feeds.
@@ -344,6 +346,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="customerId">The customer ID for which the call is made.</param>
         /// <param name="gmbFeedResourceName">The GMB feed resource name.</param>
         /// <returns>The newly created feed mapping.</returns>
+        // [START lmYTQ4ZTdm]
         private static FeedMapping GetGMBFeedMapping(GoogleAdsClient client, long customerId,
             string gmbFeedResourceName)
         {
@@ -365,6 +368,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
             GoogleAdsRow googleAdsRow = result.FirstOrDefault();
             return (googleAdsRow == null) ? null : googleAdsRow.FeedMapping;
         }
+        // [END lmYTQ4ZTdm]
 
         /// <summary>
         /// Waits for GMB feed to be ready.
@@ -372,6 +376,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="client">The Google Ads client.</param>
         /// <param name="customerId">The customer ID for which the call is made.</param>
         /// <param name="gmbFeedResourceName">Name of the GMB feed resource.</param>
+        // [START U1YjFkY2Ji]
         private static void WaitForGMBFeedToBeReady(GoogleAdsClient client, long customerId,
             string gmbFeedResourceName)
         {
@@ -406,6 +411,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 $"GMB Feed is not ready after {MAX_FEEDMAPPING_RETRIEVAL_ATTEMPTS}" +
                 $" retries."));
         }
+        // [END U1YjFkY2Ji]
 
         /// <summary>
         /// Creates the customer feed.
@@ -413,6 +419,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="client">The client.</param>
         /// <param name="customerId">The customer identifier.</param>
         /// <param name="gmbFeedResourceName">Name of the GMB feed resource.</param>
+        // [START E0N2FiMzg5]
         private static void CreateCustomerFeed(GoogleAdsClient client, long customerId,
             string gmbFeedResourceName)
         {
@@ -458,5 +465,6 @@ namespace Google.Ads.GoogleAds.Examples.V5
             Console.WriteLine($"Customer feed created with resource name: {addedCustomerFeed}.");
             return;
         }
+        // [END E0N2FiMzg5]
     }
 }

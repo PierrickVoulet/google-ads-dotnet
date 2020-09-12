@@ -92,6 +92,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// constructed elsewhere.
         ///
         /// See AddShoppingListingGroupTree for a more comprehensive example.</param>
+        // [START RhMGUwM2Iz]
         public void Run(GoogleAdsClient client, long customerId, long merchantCenterAccountId,
             bool createDefaultListingGroup)
         {
@@ -128,6 +129,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 throw;
             }
         }
+        // [END RhMGUwM2Iz]
 
         /// <summary>
         /// Creates a new campaign budget in the specified client account.

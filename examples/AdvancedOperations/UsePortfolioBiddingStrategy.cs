@@ -112,6 +112,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="name">The bidding strategy name.</param>
         /// <param name="bidCeiling">The bid ceiling amount in micros.</param>
         /// <returns>The bidding strategy resource name.</returns>
+        // [START hhYTcwYWY2]
         private string CreatePortfolioBiddingStrategy(GoogleAdsClient client,
             long customerId, string name, long bidCeiling)
         {
@@ -143,6 +144,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
 
             return biddingResponse.Results[0].ResourceName;
         }
+        // [END hhYTcwYWY2]
 
         /// <summary>
         /// Creates a shared campaign budget to be used to create the campaign.
@@ -152,6 +154,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="name">The budget name.</param>
         /// <param name="amount">The budget amount in micros.</param>
         /// <returns>The budget resource name.</returns>
+        // [START UwYjdmYTZk]
         private string CreateSharedBudget(GoogleAdsClient client, long customerId, string name,
             long amount)
         {
@@ -179,6 +182,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 customerId.ToString(), new CampaignBudgetOperation[] { campaignBudgetOperation });
             return retVal.Results[0].ResourceName;
         }
+        // [END UwYjdmYTZk]
 
         /// <summary>
         /// Creates the campaign with a portfolio bidding strategy.
@@ -196,6 +200,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
             // Get the CampaignService.
             CampaignServiceClient campaignService = client.GetService(Services.V5.CampaignService);
 
+            // [START cyMzYyZjRj]
             // Create the campaign.
             Campaign campaign = new Campaign()
             {
@@ -222,6 +227,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                     TargetPartnerSearchNetwork = false
                 }
             };
+            // [END cyMzYyZjRj]
 
             // Create the operation.
             CampaignOperation operation = new CampaignOperation()

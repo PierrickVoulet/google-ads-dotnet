@@ -110,6 +110,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="customerId">The customer ID for which the call is made.</param>
         /// <param name="chainId">The retail chain ID.</param>
         /// <returns>Resource name of the newly created Affiliate Location Extension feed.</returns>
+        // [START cwNDY5ODll]
         private static string CreateAffiliateLocationExtensionFeed(GoogleAdsClient client,
             long customerId, long chainId)
         {
@@ -155,6 +156,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 $"{feedResourceName}.");
             return feedResourceName;
         }
+        // [END cwNDY5ODll]
 
         /// <summary>
         /// Deletes the old location extension feeds.
@@ -298,6 +300,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="customerId">The customer ID for which the call is made.</param>
         /// <param name="feedResourceName">The feed resource name.</param>
         /// <returns>The newly created feed mapping.</returns>
+        // [START Q3NWUxM2Fi]
         private static FeedMapping GetAffiliateLocationExtensionFeedMapping(GoogleAdsClient client,
             long customerId, string feedResourceName)
         {
@@ -320,6 +323,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
             GoogleAdsRow googleAdsRow = result.FirstOrDefault();
             return (googleAdsRow == null) ? null : googleAdsRow.FeedMapping;
         }
+        // [END Q3NWUxM2Fi]
 
         /// <summary>
         /// Waits for the Affliate location extension feed to be ready.
@@ -327,6 +331,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="client">The Google Ads client.</param>
         /// <param name="customerId">The customer ID for which the call is made.</param>
         /// <param name="feedResourceName">Resource name of the feed.</param>
+        // [START NjZWZkYTQ5]
         private static FeedMapping WaitForFeedToBeReady(GoogleAdsClient client, long customerId,
             string feedResourceName)
         {
@@ -361,6 +366,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 $"Feed is not ready after {MAX_FEEDMAPPING_RETRIEVAL_ATTEMPTS}" +
                 $" retries."));
         }
+        // [END NjZWZkYTQ5]
 
         /// <summary>
         /// Creates the campaign feed.
@@ -373,6 +379,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <paramref name="feedResourceName"/></param>
         /// <param name="feedResourceName">The feed resource name.</param>
         /// <param name="chainId">The retail chain ID.</param>
+        // [START I4NmQ2OWYz]
         private static void CreateCampaignFeed(GoogleAdsClient client, long customerId,
             long campaignId, FeedMapping feedMapping, string feedResourceName, long chainId)
         {
@@ -412,6 +419,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
             Console.WriteLine($"Campaign feed created with resource name: {addedCampaignFeed}.");
             return;
         }
+        // [END I4NmQ2OWYz]
 
         /// <summary>
         /// Gets the feed attribute ID for the retail chain Id.
@@ -420,6 +428,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <returns>The feeed attribute ID.</returns>
         /// <exception cref="ArgumentException">Affiliate location feed mapping isn't setup
         /// correctly.</exception>
+        // [START I4NzUzZWUy]
         public static long GetAttributeIdForChainId(FeedMapping feedMapping)
         {
             foreach (AttributeFieldMapping fieldMapping in feedMapping.AttributeFieldMappings)
@@ -432,5 +441,6 @@ namespace Google.Ads.GoogleAds.Examples.V5
             }
             throw new ArgumentException("Affiliate location feed mapping isn't setup correctly.");
         }
+        // [END I4NzUzZWUy]
     }
 }

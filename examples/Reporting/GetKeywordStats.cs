@@ -54,6 +54,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// </summary>
         /// <param name="client">The Google Ads client.</param>
         /// <param name="customerId">The Google Ads customer Id.</param>
+        // [START EyOGEyMWQx]
         public void Run(GoogleAdsClient client, long customerId)
         {
             // Get the GoogleAdsService.
@@ -116,5 +117,6 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 throw;
             }
         }
+        // [END EyOGEyMWQx]
     }
 }

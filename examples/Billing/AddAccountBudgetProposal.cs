@@ -65,6 +65,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// <param name="client">The Google Ads client.</param>
         /// <param name="customerId">The Google Ads customer ID for which the call is made.</param>
         /// <param name="billingSetupId">The Billing Setup ID for which the call is made.</param>
+        // [START FlM2YyNzli]
         public void Run(GoogleAdsClient client, long customerId, long billingSetupId)
         {
             // Get the AccountBudgetProposalServiceClient.
@@ -130,5 +131,6 @@ namespace Google.Ads.GoogleAds.Examples.V5
             }
 
         }
+        // [END FlM2YyNzli]
     }
 }

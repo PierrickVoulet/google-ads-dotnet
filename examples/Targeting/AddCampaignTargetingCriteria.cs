@@ -173,6 +173,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// </param>
         /// <returns>a campaign criterion object with the specified locationId and resource name.
         /// </returns>
+        // [START A5MTM2MDQ3]
         private CampaignCriterion buildLocationCriterion(long locationId,
             string campaignResourceName)
         {
@@ -186,6 +187,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 }
             };
         }
+        // [END A5MTM2MDQ3]
 
         /// <summary>
         /// Creates a proximity Criterion.
@@ -194,6 +196,7 @@ namespace Google.Ads.GoogleAds.Examples.V5
         /// </param>
         /// <returns>a campaign criterion object with the specified locationId and resource name.
         /// </returns>
+        // [START g4ZjAxMDQz]
         private CampaignCriterion buildProximityCriterion(string campaignResourceName)
         {
             ProximityInfo proximity = new ProximityInfo()
@@ -216,5 +219,6 @@ namespace Google.Ads.GoogleAds.Examples.V5
                 Proximity = proximity
             };
         }
+        // [END g4ZjAxMDQz]
     }
 }
